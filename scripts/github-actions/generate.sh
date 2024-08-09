@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-set -Eeuo pipefail
-echo "test1"
+# set -Eeuo pipefail
+set -Eeuox pipefail
 image="${GITHUB_REPOSITORY##*/}" # "python", "golang", etc
 
 [ -n "${GENERATE_STACKBREW_LIBRARY:-}" ] || [ -x ./generate-stackbrew-library.sh ] # sanity check
